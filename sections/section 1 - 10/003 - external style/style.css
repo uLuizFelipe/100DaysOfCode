@@ -10,6 +10,7 @@ h1 {
 
 body {
     position: relative;
+    background-image: linear-gradient(to right, blue, blueviolet,violet,  orange, yellow);
 }
 
 div {
@@ -20,7 +21,16 @@ div {
     top: 50vh;
     left: 50vw;
     transform: translate(-50%,-50%);
-    background-color: red;
+    
+    background-image: linear-gradient(270deg, blue, blueviolet,violet,  orange, yellow);
 
     text-align: center;
+}
+
+p {
+    font-size: ;
+    font-family: ;
+    font-weight: ;
+    font-style: ;
+    font-display: ;
 }

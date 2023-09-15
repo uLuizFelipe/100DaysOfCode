@@ -82,7 +82,6 @@
 <hr>
 
 
-
 # <p style="text-align: center; font-weight:1000;">CSS
 
   <p style="font-size: smaller; text-align: center;"> Linguagem de estilização em camada, capaz de aplicar diversas regras de estilização em cascata
@@ -100,7 +99,21 @@
      Para introduzir comentários às CSS, utiliza-se: /* comentário */
 <hr>
 
-# <p style="text-align: center;"> 
+
+# <p style="text-align: center;">Fontes em html
+
+Fontes ditam a aparência dos simbolos utilizados na página, mais comumente das letras
+
+- Atributos das fontes
+    - font-size: ligado ao tamanho das letras
+    - font-family: dita o estilo e forma das letras
+    - font-weight: representa o peso das letras
+    - font-style: estilos expecificos para letras
+- para mais tipos de fonts, recomenda-se buscas na rede
+
+# <p style="text-align: center;"> Peculiaridades
+
+- O atributo <strong>text-align</strong> não centraliza a tag, mas sim seu conteúdo, tornando possível centralizar uma tag que é conteúdo de outra tag com esse comando
 
 # <p style="text-align: center">Pseudo-classes em CSS
 Especifica o estado do elemento para que os estilos sejam aplicados
