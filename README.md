@@ -15,13 +15,13 @@
 
 # <p style="text-align: center;">URL (Uniform Resource Locator)
 
-- Endereço unificado na rede para cada página, formado por diversas partes:
-- http/https: protocolo de trasferencia de hipertextos/protocolo de trasferencia de hipertextos seguro
+Endereço unificado na rede para cada página, formado por diversas partes:
+- <strong>http/https</strong>: protocolo de trasferencia de hipertextos/protocolo de trasferencia de hipertextos seguro
     - <em>
         <p style="font-size: smaller;">Na prática, a diferença se dá pela encriptação dos dados para uma conexão mais segura</p>
     </em>
-- Domínio: identificador de endereço exclusivo para uma página na rede, é por ele que usuários normalmente acessam as páginas
-- Caminho/Path: representam uma guia de subpáginas em um site, para não ser necessário ir sempre a aba de inicio para transitar em um site
+- <strong>Domínio</strong>: identificador de endereço exclusivo para uma página na rede, é por ele que usuários normalmente acessam as páginas
+- <strong>Caminho/Path</strong>: representam uma guia de subpáginas em um site, para não ser necessário ir sempre a aba de inicio para transitar em um site
 <hr>
 
 # <p style="text-align: center;">IP  (Internet Protocol/endereço IP)
@@ -70,7 +70,9 @@
     para introduzir comentários em html usasse a marcação <!--comentário-->;
 <hr>
 
-# <p style="text-align: center;">links(&lt;a href="link"&gt;)
+# <p style="text-align: center;">links
+
+        <a href="link" rel="">
 
 - Links ou ancoras são resursos interagíveis que permitem o usuário transitar entre sites, baixar conteúdos e muitas outras possibilidades.
     - Para acessas páginas de um mesmo produto, aconselhasse utilizar: 
@@ -81,6 +83,11 @@
         - &lt;a href="path" download="arquivo" type="formato do arquivo"&gt;
 <hr>
 
+# <p style="text-align: center;">Imagens
+
+        <img src="path.tipo" alt="descrição">
+
+- Marcadores vazios que mostram conteúdos guardados em seus atributos, mais expecificamente o src="", o atributo alt="" quarda uma guia de texto que descreve a imagem.
 
 # <p style="text-align: center; font-weight:1000;">CSS
 
