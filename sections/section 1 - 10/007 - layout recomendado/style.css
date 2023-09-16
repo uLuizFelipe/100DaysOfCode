@@ -1,0 +1,55 @@
+* {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+h1, main h2 {
+    text-decoration: underline;
+}
+header {
+    background-color: rgb(235, 196, 128);
+}
+header menu {
+    width: 400px;
+    margin: auto;
+
+    list-style: none;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+header menu a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    padding: 0px 5px;
+    margin: 10px;
+}
+header menu a:hover {
+    color: white;
+    background-color: black;
+}
+main {
+    background-color: rgb(252, 173, 76);
+}
+main h2 {
+    width: 400px;
+    margin: auto;
+    padding: 10px 0px;
+}
+main img {
+    width: 300px;
+    border-radius: 5px;
+}
+main p {
+    width: 400px;
+    margin: auto;
+    border: 2px yellow solid;
+    border-radius: 12px;
+
+    color: rgb(250, 193, 250);
+    background-color: black;
+}
+footer {
+    background-color: rgb(255, 149, 42);
+}

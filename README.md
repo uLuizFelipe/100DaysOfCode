@@ -65,9 +65,23 @@ Endereço unificado na rede para cada página, formado por diversas partes:
             - <strong>&lt;tfoot&gt;</strong> : rodapé da tabela
         - <strong>&lt;form&gt;</strong> : abertura de um formulário
         - <strong>&lt;footer&gt;</strong> : assistente de divisão do final da página
+<hr>
 
 # <p style="text-align: center;">comentários em html
     para introduzir comentários em html usasse a marcação <!--comentário-->;
+<hr>
+
+# <p style="text-align: center;">Fontes em html
+
+Fontes ditam a aparência dos simbolos utilizados na página, mais comumente das letras
+
+- Atributos das fontes
+    - font-size: ligado ao tamanho das letras
+    - font-family: dita o estilo e forma das letras
+    - font-weight: representa o peso das letras
+    - font-style: estilos expecificos para letras
+
+- para mais tipos de fonts, recomenda-se buscas na rede
 <hr>
 
 # <p style="text-align: center;">links
@@ -87,7 +101,26 @@ Endereço unificado na rede para cada página, formado por diversas partes:
 
         <img src="path.tipo" alt="descrição">
 
-- Marcadores vazios que mostram conteúdos guardados em seus atributos, mais expecificamente o src="", o atributo alt="" quarda uma guia de texto que descreve a imagem.
+- Marcadores vazios que mostram conteúdos guardados em seus atributos, mais expecificamente o <strong>src=""</strong>, o atributo <strong>alt=""</strong> quarda uma guia de texto que descreve a imagem.
+
+<hr>
+
+# <p style="text-align: center;">Listas
+
+Listas são elementos que podem organizar itens de forma ordenada ou não, normalmente utilizadas para itens de menus, links ou itens genêricos
+
+    lista ordenada              Lista não ordenada
+
+        <ol>                            <ul>
+            <li>                            <li>
+            <li>                            <li>
+            <li>                            <li>
+        <ol>                            <ul>
+
+- O marcador <strong>&lt;ol&gt;</strong> representa o inicio de uma lista ordenada, já <strong>&lt;ul&gt;</strong> inicia a lista não ordenada. Todos os elementos de uma lista são precedidos por um marcador <strong>&lt;li&gt;</strong> sem fechamento
+
+- Para alterar a forma dos dots de cada elemento de uma lista, ordenada ou não, utiliza-se o atributo type, sucedido pela forma desejada.
+<hr>
 
 # <p style="text-align: center; font-weight:1000;">CSS
 
@@ -104,23 +137,36 @@ Endereço unificado na rede para cada página, formado por diversas partes:
 
 # <p style="text-align: center;"> Comentários em css
      Para introduzir comentários às CSS, utiliza-se: /* comentário */
+
 <hr>
 
+# <p style="text-align: center">Seletores em CSS
+Seletores identificam qual(is) elementos serão alterados com as caracteristicas entregues
+- Tipos de tag
 
-# <p style="text-align: center;">Fontes em html
+        CSS: p { ... }  --->  <p>...</p>
+    - Seleciona todas as tags HTML desse tipo
+- ID
 
-Fontes ditam a aparência dos simbolos utilizados na página, mais comumente das letras
+        CSS: p#id { ... }  --->  <p id="id">...</p>
+    - Seleciona apenas o elemento que possui aquele id
+- Classe
 
-- Atributos das fontes
-    - font-size: ligado ao tamanho das letras
-    - font-family: dita o estilo e forma das letras
-    - font-weight: representa o peso das letras
-    - font-style: estilos expecificos para letras
-- para mais tipos de fonts, recomenda-se buscas na rede
+        CSS: p.classe { ... }  --->  <p class="classe">...</p>
+    - Seleciona todos os elementos que possuem essa classe    
+- Attributo
 
-# <p style="text-align: center;"> Peculiaridades
+        CSS: [src] { ... }  --->  <img src="...">
+    - Seleciona todos os elementos que possuem aquele atributo
+- Universal
 
-- O atributo <strong>text-align</strong> não centraliza a tag, mas sim seu conteúdo, tornando possível centralizar uma tag que é conteúdo de outra tag com esse comando
+        CSS: * { ... } ---> <p>....</p> <img ...> <div>...</div>
+    - Seleciona todos os elementos do arquivo
+- Grupo/Lista de seletores
+
+        CSS: p, p.classe, p#id { ... }  --->  <p>...</p> <p class="classe">...</p> <p id="id">...</p> 
+    - Seleciona todos os elementos que baterem com alguma dessas características
+<hr>
 
 # <p style="text-align: center">Pseudo-classes em CSS
 Especifica o estado do elemento para que os estilos sejam aplicados
@@ -172,3 +218,45 @@ Especifica o estado do elemento para que os estilos sejam aplicados
     - focus-within: elemento focado e seus descendentes
 - <strong>Funcionais</strong>: seguem uma lógica para serem encontrados
     - <strong>where()</strong>: cria uma cadeia multipla de seletores, se qualquer um deles for seguido, o elemento é alterado pelo estilo
+<hr>
+
+# <p style="text-align: center"> Box model
+
+Representação dos elementos para os comandos CSS, dividindo as áreas em margin, border, padding e conteúdo
+- <strong>margin</strong>: área externa ao elemento, determina a distância entre ele e outros elementos
+- <strong>border</strong>: linha que representa o final da área do conteúdo
+- <strong>padding</strong>: área entre a borda e o conteúdo
+- <strong>conteúdo</strong>: os elementos do arquivo HTML
+<hr>
+
+# <p style="text-align: center"> Displays block vs inline
+
+        display: block;
+        display: inline;
+        display: inline-block;
+
+Atributo que dita se um marcador cosumirá todo o espaço em sua volta ou se será tratado como em uma linha, utilizando apenas seu espaço
+
+- elementos inline não apresentam margins, apenas paddings, mesmo quando organizados
+- para apresentar ambas as características, ter margins e paddins e ainda ser encaixado em uma linha, utilizamos o atribulo <strong>display: "inline-block"</strong>;
+<hr>
+
+# <p style="text-align: center"> Margin collapsing em elemento inline-block
+O collapso de margens ocorre quando apenas o maior valor de margem vertical é respeitado entre os elementos, sem somar seus valores
+- ocorrem apenas com margins verticais.
+<hr>
+
+# <p style="text-align: center"> Box shadow
+
+        box-shadow: bottom left spreading cor;
+        box-text: bottom left spreading cor;
+- cria um efeito de sombra em volta do elemento ou do conteúdo
+<hr>
+
+# <p style="text-align: center;"> Peculiaridades
+
+- Elementos aninhados herdam as regras de seus containers
+- O elemento mais especifico dita a regra vigente
+- dentro dos seletores, uma regra escrita diversas vezes recebe a ultima escrita como a vigente
+- O atributo <strong>text-align</strong> não centraliza a tag, mas sim seu conteúdo, tornando possível centralizar uma tag que é conteúdo de outra tag com esse comando
+- é possivel dar margens verticais negativas para elementos como imagens, o que as faz "subir dentro de seu container"

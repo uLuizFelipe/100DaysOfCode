@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+        body {
+            text-align: center;
+        }
+        h1 {
+            width: 400px;
+            height: 80px;
+
+            border-radius: 50px;
+
+            background-color: aqua;
+
+            padding-top: 30px;
+
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 120px;
+        }
+        h1,h2 {
+            text-decoration: underline;
+        }
+        main {
+            width: 400px;
+            height: 260px;
+
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        div {
+            background-color: blueviolet;
+        }
+        #ordenada {
+            border-radius: 0px 10px 10px 0px;
+            float: right;
+            height: 100%;
+            width: 50%;
+        }
+        #nao {
+            border-radius: 10px 0px 0px 10px;
+            float: left;
+            height: 100%;
+            width: 50%;
+        }
+        li {
+            list-style: none;
+        }
+</head>
+<body>
+    <h1>Modelo de Listas</h1>
+    <main>
+        <div id="ordenada">
+            <h2>Lista ordenada</h2>
+            <p>Atividades do meu dia</p>
+            <ol type="i">
+                <li>Acordar</li>
+                <li>Tomar banho</li>
+                <li>Tomar café</li>
+                <li>Iniciar estudos</li>
+                <li>Almoçar</li>
+                <li>Banho</li>
+                <li>Academia</li>
+                <li>Banho</li>
+                <li>Uber</li>
+                <li>faculdade</li>
+                <li>Meu tempo</li>
+            </ol>
+        </div>
+        <div id="nao">
+            <h2>Lista não ordenada</h2>
+            <p>Ingredientes da omelete</p>
+            <ul type="square">
+                <li>Tomate</li>
+                <li>Pimentão</li>
+                <li>Queijo</li>
+                <li>Frango</li>
+                <li>Temperos</li>
+                <li>Manteiga</li>
+                <li>Ovos</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
