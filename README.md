@@ -237,20 +237,20 @@ Representação dos elementos para os comandos CSS, dividindo as áreas em margi
 
 Atributo que dita se um marcador cosumirá todo o espaço em sua volta ou se será tratado como em uma linha, utilizando apenas seu espaço
 
-- elementos inline não apresentam margins, apenas paddings, mesmo quando organizados
-- para apresentar ambas as características, ter margins e paddins e ainda ser encaixado em uma linha, utilizamos o atribulo <strong>display: "inline-block"</strong>;
+- Elementos inline não apresentam margins, apenas paddings, mesmo quando organizados
+- Para apresentar ambas as características, ter margins e paddins e ainda ser encaixado em uma linha, utilizamos o atribulo <strong>display: "inline-block"</strong>;
 <hr>
 
 # <p style="text-align: center"> Margin collapsing em elemento inline-block
 O collapso de margens ocorre quando apenas o maior valor de margem vertical é respeitado entre os elementos, sem somar seus valores
-- ocorrem apenas com margins verticais.
+- Ocorrem apenas com margins verticais.
 <hr>
 
 # <p style="text-align: center"> Box shadow
 
         box-shadow: bottom left spreading cor;
         box-text: bottom left spreading cor;
-- cria um efeito de sombra em volta do elemento ou do conteúdo
+- Cria um efeito de sombra em volta do elemento ou do conteúdo
 <hr>
 
 # <p style="text-align: center;"> Peculiaridades
@@ -259,4 +259,24 @@ O collapso de margens ocorre quando apenas o maior valor de margem vertical é r
 - O elemento mais especifico dita a regra vigente
 - dentro dos seletores, uma regra escrita diversas vezes recebe a ultima escrita como a vigente
 - O atributo <strong>text-align</strong> não centraliza a tag, mas sim seu conteúdo, tornando possível centralizar uma tag que é conteúdo de outra tag com esse comando
-- é possivel dar margens verticais negativas para elementos como imagens, o que as faz "subir dentro de seu container"
+- É possivel dar margens verticais negativas para elementos como imagens, o que as faz "subir dentro de seu container"
+<hr>
+
+# <p style="text-align: center"> Git & gitHub
+
+- <strong>Git</strong>: Ferramenta de versionamento local que permite armazenar e modificar diferentes versões de um código
+    - <strong>Diretório</strong>: pasta do projeto
+    - <strong>Repositório</strong>: todos os arquivos e pastas adicionados e versionados
+        - <strong>Commits</strong>: Snapshot ( é o registro do estado de um sistema, aplicação ou arquivos em determinado ponto no tempo em formato de imagem )
+        - <strong>Branch</strong>: local de armazenamento de um commit dentro de um repositório, permitindo maior organização dentro do diretório
+- <strong>gitHub</strong>: Rede social que serve para salvar seus versionamentos de modo publico ou privado em servidores, permitindo colaborações entre devs
+<hr>
+
+# <p style="text-align: center"> GUI & CLI
+
+- <strong>Gui</strong> (graphic user interface): interface visual que permite interação entre a maquina e o usuário
+
+- <strong>Cli</strong> (command line interface): interface de texto que permite comandar a maquina por meio de comandos
+    - No Windows chamamos de <strong>prompt</strong>
+    - No Mac apelidamos de <strong>z shell</strong>
+<hr>
