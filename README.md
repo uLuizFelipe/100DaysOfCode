@@ -270,6 +270,10 @@ O collapso de margens ocorre quando apenas o maior valor de margem vertical é r
         - <strong>Commits</strong>: Snapshot ( é o registro do estado de um sistema, aplicação ou arquivos em determinado ponto no tempo em formato de imagem )
         - <strong>Branch</strong>: local de armazenamento de um commit dentro de um repositório, permitindo maior organização dentro do diretório
 - <strong>gitHub</strong>: Rede social que serve para salvar seus versionamentos de modo publico ou privado em servidores, permitindo colaborações entre devs
+    - armazenamento na nuvem
+    - página de portfólio
+    - permite trabalhos colaborativos
+    - permite contribuições em códigos alheis
 <hr>
 
 # <p style="text-align: center"> GUI & CLI
