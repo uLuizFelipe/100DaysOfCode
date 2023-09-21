@@ -68,7 +68,8 @@ Endereço unificado na rede para cada página, formado por diversas partes:
 <hr>
 
 # <p style="text-align: center;">comentários em html
-    para introduzir comentários em html usasse a marcação <!--comentário-->;
+     <!--comentário-->;
+- para introduzir comentários que serão ignorados pela página em html
 <hr>
 
 # <p style="text-align: center;">Fontes em html
@@ -76,17 +77,19 @@ Endereço unificado na rede para cada página, formado por diversas partes:
 Fontes ditam a aparência dos simbolos utilizados na página, mais comumente das letras
 
 - Atributos das fontes
-    - font-size: ligado ao tamanho das letras
-    - font-family: dita o estilo e forma das letras
-    - font-weight: representa o peso das letras
-    - font-style: estilos expecificos para letras
 
+        *{
+            font-size: smaller; small; medium; large; larger; (ligado ao tamanho das letras)
+            font-family: Font; (dita o estilo e forma das letras)
+            font-weight: 100-1000; (representa o peso das letras)
+            font-style: italic; normal; oblique; (estilos expecificos para letras
+        }
 - para mais tipos de fonts, recomenda-se buscas na rede
 <hr>
 
 # <p style="text-align: center;">links
 
-        <a href="link" rel="">
+        <a href="link" rel="">texto</a>
 
 - Links ou ancoras são resursos interagíveis que permitem o usuário transitar entre sites, baixar conteúdos e muitas outras possibilidades.
     - Para acessas páginas de um mesmo produto, aconselhasse utilizar: 
@@ -112,9 +115,9 @@ Listas são elementos que podem organizar itens de forma ordenada ou não, norma
     lista ordenada              Lista não ordenada
 
         <ol>                            <ul>
-            <li>                            <li>
-            <li>                            <li>
-            <li>                            <li>
+            <li> elemento 1                 <li> elemento 1
+            <li> elemento 2                 <li> elemento 2
+            <li> elemento 3                 <li> elemento 3
         <ol>                            <ul>
 
 - O marcador <strong>&lt;ol&gt;</strong> representa o inicio de uma lista ordenada, já <strong>&lt;ul&gt;</strong> inicia a lista não ordenada. Todos os elementos de uma lista são precedidos por um marcador <strong>&lt;li&gt;</strong> sem fechamento
@@ -136,35 +139,47 @@ Listas são elementos que podem organizar itens de forma ordenada ou não, norma
 <hr>
 
 # <p style="text-align: center;"> Comentários em css
-     Para introduzir comentários às CSS, utiliza-se: /* comentário */
-
+      /* comentário */
+- Para introduzir comentários que serão ignorados pelas CSS
 <hr>
 
 # <p style="text-align: center">Seletores em CSS
-Seletores identificam qual(is) elementos serão alterados com as caracteristicas entregues
-- Tipos de tag
+Seletores identificam qual(is) elementos serão alterados
+- Tipos de tag:
 
-        CSS: p { ... }  --->  <p>...</p>
+        p {
+
+        }  --->  <p></p>
     - Seleciona todas as tags HTML desse tipo
-- ID
+- ID:
 
-        CSS: p#id { ... }  --->  <p id="id">...</p>
+        p#id, id {
+
+        }  --->  <p id="id"></p>
     - Seleciona apenas o elemento que possui aquele id
-- Classe
+- Classe:
 
-        CSS: p.classe { ... }  --->  <p class="classe">...</p>
+        p.classe/.classe {
+
+        }  --->  <p class="classe"></p>
     - Seleciona todos os elementos que possuem essa classe    
-- Attributo
+- Attributo:
 
-        CSS: [src] { ... }  --->  <img src="...">
+        [src] {
+
+        }  --->  <img src="..">
     - Seleciona todos os elementos que possuem aquele atributo
-- Universal
+- Universal:
 
-        CSS: * { ... } ---> <p>....</p> <img ...> <div>...</div>
+        * {
+
+        } ---> <p></p>, <img src="..">, <div></div>
     - Seleciona todos os elementos do arquivo
 - Grupo/Lista de seletores
 
-        CSS: p, p.classe, p#id { ... }  --->  <p>...</p> <p class="classe">...</p> <p id="id">...</p> 
+        p, p.classe, p#id {
+
+        }  --->  <p></p>, <p class="classe"></p>, <p id="id"></p> 
     - Seleciona todos os elementos que baterem com alguma dessas características
 <hr>
 
@@ -231,9 +246,11 @@ Representação dos elementos para os comandos CSS, dividindo as áreas em margi
 
 # <p style="text-align: center"> Displays block vs inline
 
-        display: block;
-        display: inline;
-        display: inline-block;
+        p{
+            display: block;
+            display: inline;
+            display: inline-block;
+        }
 
 Atributo que dita se um marcador cosumirá todo o espaço em sua volta ou se será tratado como em uma linha, utilizando apenas seu espaço
 
@@ -248,9 +265,130 @@ O collapso de margens ocorre quando apenas o maior valor de margem vertical é r
 
 # <p style="text-align: center"> Box shadow
 
-        box-shadow: bottom left spreading cor;
-        box-text: bottom left spreading cor;
+        p{/* bottom, left, spreading, cor */
+            box-shadow: 0px 0px 0px cor; /* cria sombra em volta das bordas */
+            
+            box-text: 0px 0px 0px cor; /* cria sombra no conteúdo escrito */
+        }
 - Cria um efeito de sombra em volta do elemento ou do conteúdo
+<hr>
+
+# <p style="text-align: center;"> Flexbox
+    #container {
+        display: flex; /*muda a natureza do container*/
+
+        flex-direction: row; /* disponibiliza o conteúdo em linhas */
+        flex-direction: row-reverse; /* inverte a ordem e disponibiliza em 1 linha */
+        flex-direction: column; /* disponibiliza o conteúdo em colunas */
+        flex-direction: column-reverse; /* inverte a ordem e disponibiliza em 1 coluna */
+
+        flex-wrap: wrap; /* conteúdo se pressiona quando as dimensões diminuem */
+        flex-wrap: nowrap; /* conteúdo mantem estático */
+        
+        flex-flow: ;/* um shortcut dos comandos anteriores */
+    }
+Ao necessitar de um container modular que permita organizar os itens dentro dele de forma fluida, utilizamos o <strong>display: flex;</strong>
+- Quando flex, o container nos permite manipular certas configurações uteis, como sua disposição de itens e sua natureza quando prensado.
+    - <strong>flex-directions</strong>: permite organizar os itens em linhas ou colunas
+    - <strong>flex-wrap</strong>: dita a natureza dos itens quando o conteiner é prensado, se vão permanecer estáticos ou ser movimentados pelo espaço
+
+            #container{
+                align-items: start;
+                align-items: center;
+                align-items: end;
+            }
+    - dentro de um container flex ainda é possivel alinhar os itens dentro de seus espaços criados
+    
+            #container{
+                justify-content: center; /* empacota os items no centro */
+                justify-content: start; /* empacota os items no inicio */
+                justify-content: end; /* empacota items no final */
+                justify-content: flex-start; /* empacota items flex no inicio */
+                justify-content: flex-end; /* empacota items flex no final */
+                justify-content: left; /* empacota items na esquerda */
+                justify-content: right; /* empacota items na direita */
+            }
+    - por fim, ainda é possível definir como será distribuido o espaço entre e ao redor dos itens como o <strong>justify-content</strong>.
+<hr>
+
+# <p style="text-align: center;"> Backgrounds
+    #container {
+        background-color: ; /* define uma cor para o fundo */
+        
+        background-image: linear-gradient(sentido, cores); /* define um estilo degrade com sentido e cores integrantes */
+
+        background-position: position position; /* define a posição da imagem no enquadramento */
+
+        background-repeat: repeat; /* define repetição à imagem do fundo */
+        background-repeat: no-repeat; /* define não repetição à imagem se repetirá no fundo */
+
+        background-size: 0vW 0vh; /* define o tamanho da imagen no fundo */
+        background-size: cover; /* imagem se adapta ao tamanho da página para não mostrar espaços vázios */
+        background-size: contain; /* mantém as dimensões da imagem e cria espaços vázios em volta */
+
+        background-attachment: scroll; /* imagem se moverá junto ao scroll da página */
+        background-attachment: fixed; /* foco da imagem será o mesmo durante a rolagem da página */
+
+        background: cor, url, posição, repeat, size; /* shortcut para background */
+    }
+- É possível definir qual será o plano de fundo do elemento, sua cor, se terá imagens, qual posição ficará focado, se repetirá, qual o tamanho ficará exposto e ainda se ficará fixada ou seguirá a rolagem da página
+<hr>
+
+# <p style="text-align: center;"> Background images
+    #container {
+        background-image: url("path.tipo"); /* adiciona a imagem no fundo */
+        background-position: ;
+        background-repeat: ;
+        background-size: ;
+    }
+- Configura a fonte da imagens de fundo, sua posição de foco, se poderá repetir e o tamanho que serpa apresentada
+<hr>
+
+# <p style="text-align: center;"> Position Absolute
+    #elemento {
+        position: absolute; /* muda a natureza do elemento para não interagir mais com os outros elementos */
+        top: ; /* expecifica a distância que será distanciada do topo */
+        bottom: ; /* expecifica a distância que será distanciada do fundo */
+        right: ; /* expecifica a distância que será distanciada da direita */
+        left: ; /* expecifica a distância que será distanciada da esquerda */
+    }
+- Manipula a posição de um elemento para a página, tornando sua posição inicial absoluta para a página e ditando as distâncias de sua localização inicial 
+<hr>
+
+# <p style="text-align: center;"> Position Relative
+    #container #elemento {
+        position: relative; /* muda a natureza do elemento dentro do container */
+        top: ; /* expecifica a distância que será distanciada do topo */
+        bottom: ; /* expecifica a distância que será distanciada do fundo */
+        right: ; /* expecifica a distância que será distanciada da direita */
+        left: ; /* expecifica a distância que será distanciada da esquerda */
+    }
+- Manipula a posição de um elemento dentro de um container, tornando-a relativa a esse container e ditando as distâncias de sua localização inicial
+<hr>
+
+# <p style="text-align: center;"> Position Fixed
+    #container #elemento {
+        position: fixed; /* muda a natureza do elemento para a página */
+        top: ; /* expecifica a distância que será distanciada do topo */
+        bottom: ; /* expecifica a distância que será distanciada do fundo */
+        right: ; /* expecifica a distância que será distanciada da direita */
+        left: ; /* expecifica a distância que será distanciada da esquerda */
+    }
+- Manipula a posição de um elemento para a página, fizando-a na viewport e ditando as distâncias de sua localização inicial
+<hr>
+
+# <p style="text-align: center;"> Dimensionamento
+Para manter um elemento com o tamanho da viewport ou do container que o contem, recomenda-se utilizar
+
+        #conteúdo{
+            width: 100% /* limita a largura para o container atual */
+            width: 100vw /* limita a largura para a viewport atual */
+
+            height: 100% /* limita a altura para o container atual */
+            height: 100vh /* limita a altura para a viewport atual */
+
+            box-sizing: border-box; /* calcula o tamanho com o conteúdo e os elementos box */
+        }
 <hr>
 
 # <p style="text-align: center;"> Peculiaridades

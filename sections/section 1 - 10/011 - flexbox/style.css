@@ -1,0 +1,58 @@
+@charset "UTF-8";
+*{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    background-color: yellow;
+    padding: 10px;
+    border: 2px solid black;
+}
+header div{
+    background-color: aqua;
+    padding: 10px;
+    border: 2px solid black;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+header h1{
+    width: 200px;
+    padding: 10px;
+    margin-left: -10px;
+    background-color: brown;
+    border: 2px solid black;
+}
+header menu{
+    width: 200px;
+    background-color: aquamarine;
+    padding: 10px;
+    border: 2px solid black;
+}
+header ul{
+    width: 180px;
+    padding: 5px;
+    background-color: bisque;
+    list-style: none;
+    border: 2px solid black;
+}
+header li{
+    width: 150px;
+    border: 2px solid black;
+    background-color: brown;
+}
+header  a{
+    padding: 10px;
+    color: orange;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px black;
+    text-transform: uppercase;
+}
+header a:hover{
+    color: white;
+}

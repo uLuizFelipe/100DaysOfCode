@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+header h1{
+    border-radius: 0px 0px 0px 15px;
+    border-left: 5px solid orange;
+    border-bottom: 5px solid orange;
+    box-shadow: -2px 2px 0px black;
+}
+
+header a{
+    color: orange;    
+}
+
+header a:hover{
+    color: rgb(195, 227, 255);
+}
+
+main #destaque{
+    height: 700px;
+    
+    background-image: url("../imgs/paisagem_original.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+main article{
+    width: 400px;
+    height: 200px;
+    border-radius: 25px;
+
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+
+    position: relative;
+    top: 250px;
+
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+main article h1, p{
+    color: white;
+    text-transform: uppercase;
+    margin: 25px;
+}
+
+main h1{
+    font-size: 30px;
+}
+
+main p{
+    font-size: 12px;
+}
+
+main a{
+    padding: 12px 24px;
+
+    color: orange;
+    text-shadow: 0px 0px 2px black;
+    background-color: yellow;
+    border-radius: 15px;
+    border: 2px solid black;
+
+    font-size: 18px;
+    text-decoration: none;
+}
+
+main a:hover{
+    background-color: white;
+}
+
+main #grelha{
+    height: 10%;
+    width: 100%;
+    background: linear-gradient(90deg, pink, blueviolet);
+    text-align: center;
+    color: orange;
+    text-shadow: 1px 1px 2px black;
+    text-transform: uppercase;
+}
+
+main #grelha ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+main #grelha img{
+    margin: 10px;
+    width: 95%;
+    border-radius: 15px;
+    object-fit: contain;
+
+    box-shadow: 2px 2px 4px grey;
+}
+
+main #grelha li p{
+    color: black;
+    font-size: medium;
+    margin-top: -10px;
+}
+
+main #grelha li p strong{
+    color: rgb(132, 1, 255);
+}
