@@ -24,7 +24,7 @@ header {
     width: 97vw;
     box-sizing: border-box;
     position: absolute;
-    margin-top: 12px;
+    margin-top: 2px;
 }
 
 header section {
@@ -44,6 +44,10 @@ header h1{
 
 header menu a{
     padding-right: 10px;
+}
+
+header menu a:hover{
+    border-radius: 15px;
 }
 
 header ul{

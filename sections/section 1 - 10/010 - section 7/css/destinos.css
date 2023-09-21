@@ -1,15 +1,26 @@
 @charset "UTF-8";
 
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     background: grey;
 }
 
 a{
-    color: rgb(195, 227, 255);    
+    color: rgb(195, 227, 255);
+    padding: 2px;   
 }
 
 a:hover{
-    color: rgb(121, 17, 212);
+    color: grey;
+}
+
+menu a:hover{
+    text-shadow: none;
+    background-color: rgb(195, 227, 255);
 }
 
 header{

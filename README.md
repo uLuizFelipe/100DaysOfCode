@@ -273,7 +273,7 @@ O collapso de margens ocorre quando apenas o maior valor de margem vertical é r
 - Cria um efeito de sombra em volta do elemento ou do conteúdo
 <hr>
 
-# <p style="text-align: center;"> Flexbox
+# <p style="text-align: center;"> Display flex
     #container {
         display: flex; /*muda a natureza do container*/
 
@@ -282,7 +282,7 @@ O collapso de margens ocorre quando apenas o maior valor de margem vertical é r
         flex-direction: column; /* disponibiliza o conteúdo em colunas */
         flex-direction: column-reverse; /* inverte a ordem e disponibiliza em 1 coluna */
 
-        flex-wrap: wrap; /* conteúdo se pressiona quando as dimensões diminuem */
+        flex-wrap: wrap; /* conteúdo se remapeia no container quando as dimensões diminuem */
         flex-wrap: nowrap; /* conteúdo mantem estático */
         
         flex-flow: ;/* um shortcut dos comandos anteriores */
@@ -292,23 +292,58 @@ Ao necessitar de um container modular que permita organizar os itens dentro dele
     - <strong>flex-directions</strong>: permite organizar os itens em linhas ou colunas
     - <strong>flex-wrap</strong>: dita a natureza dos itens quando o conteiner é prensado, se vão permanecer estáticos ou ser movimentados pelo espaço
 
-            #container{
-                align-items: start;
-                align-items: center;
-                align-items: end;
-            }
-    - dentro de um container flex ainda é possivel alinhar os itens dentro de seus espaços criados
-    
-            #container{
-                justify-content: center; /* empacota os items no centro */
-                justify-content: start; /* empacota os items no inicio */
-                justify-content: end; /* empacota items no final */
-                justify-content: flex-start; /* empacota items flex no inicio */
-                justify-content: flex-end; /* empacota items flex no final */
-                justify-content: left; /* empacota items na esquerda */
-                justify-content: right; /* empacota items na direita */
-            }
-    - por fim, ainda é possível definir como será distribuido o espaço entre e ao redor dos itens como o <strong>justify-content</strong>.
+.
+
+    #container{
+            align-items: stretch /* posição padrão, os itens consomem toda a largura da página e apenas a altura necessária */
+            align-items: start; /* posiciona os itens no inicio do eixo auxiliar e os faz consumir apenas as dimensões necessárias */
+            align-items: center; /* posiciona os itens no centro do eixo auxiliar e os faz consumir apenas as dimensões necessárias */
+            align-items: baseline; /* orienta os itens de acordo com o conteúdo, de forma similar ao start */
+            align-items: end; /* posiciona os itens no final do eixo auxiliar e os faz consumir apenas as dimensões necessárias */
+    }
+
+- dentro de um container flex ainda é possivel alinhar os itens dentro de seus espaços criados com <strong>align-itens</strong> fazendo-os utilizar apenas o espaço necessário.
+
+        #container{
+            align-content: start; /* aninha o conteúdo no inicio */
+            align-content: center; /* aninha o conteúdo  no centro */
+            align-content: space-between; /* aninha os conteúdos deixando expaço entre eles */
+        }
+- permite manipulações do conteúdo no <strong>eixo auxiliar </strong>ao direcionamento flex com <strong>align-content</strong>
+
+        #container{
+            justify-content: start; /* empacota os items no inicio */
+            justify-content: center; /* empacota os items no centro */
+            justify-content: end; /* empacota items no final */
+            justify-content: left; /* empacota items na esquerda */
+            justify-content: right; /* empacota items na direita */
+            justify-content: space-between /* cria espaçamento entre os itens */
+            justify-content: space-around /* cria espaçamentos entre o container e os itens */
+            justify-content: space-evenly /* cria espaçamentos iguais entre o container e os itens */
+            
+        }
+- Por fim, ainda é possível definir como será distribuido o espaço entre e ao redor dos itens no <strong>eixo principal</strong> como o <strong>justify-content</strong>.
+<hr>
+
+# <p style="text-align: center;"> display Grid
+        #container{
+            display: grid; /* Modifica a natureza do container para manipular os elementos em linhas e colunas */
+
+            grid-template-columns: 1fr 1fr; /* define o tamanho das colunas a serem aplicadas */
+
+            grid-template-rows: 1fr 1fr; /* define o tamanho das linhas a serem aplicadas */
+
+            gap: 20px 20px; /* distanciamento entre linhas e colunas respectivamente */
+        }
+- Para poder manipular a organização dos elementos em linhas e colunas, utiliza-se a configuração de grade, na qual se escolhe o tamanho de cada coluna e linha com a opção de adicionar distanciamentos entre elas com a shortcut <strong>gap</strong>
+- A medida fr representa uma fração do espaço total a ser utilizado
+        
+        #nth-of-type(n){
+            grid-columns: n/m;
+
+            grid-rows: n/m;
+        }
+- gerencia quantas colunas ou linhas serão consumidas por aquele elemento
 <hr>
 
 # <p style="text-align: center;"> Backgrounds
@@ -352,7 +387,8 @@ Ao necessitar de um container modular que permita organizar os itens dentro dele
         right: ; /* expecifica a distância que será distanciada da direita */
         left: ; /* expecifica a distância que será distanciada da esquerda */
     }
-- Manipula a posição de um elemento para a página, tornando sua posição inicial absoluta para a página e ditando as distâncias de sua localização inicial 
+- Manipula a posição de um elemento para a página, tornando sua posição inicial absoluta para a página e ditando as distâncias de sua localização com base nos cantos do container
+- Quando um elemento é absoluto, ele não interaje mais com os outros elementos para ditar posicionamento e ele sobreporá elementos de mesma posição;
 <hr>
 
 # <p style="text-align: center;"> Position Relative
@@ -363,7 +399,8 @@ Ao necessitar de um container modular que permita organizar os itens dentro dele
         right: ; /* expecifica a distância que será distanciada da direita */
         left: ; /* expecifica a distância que será distanciada da esquerda */
     }
-- Manipula a posição de um elemento dentro de um container, tornando-a relativa a esse container e ditando as distâncias de sua localização inicial
+- Manipula a posição de um elemento dentro de um container, tornando-a relativa a esse container e ditando a diferença de sua localização inicial até sua nova localização
+- Mesmo mudando a posição de um elemento relativo, seu espaço inicial ocupado ainda será reservado no fluxo da página
 <hr>
 
 # <p style="text-align: center;"> Position Fixed
@@ -374,7 +411,9 @@ Ao necessitar de um container modular que permita organizar os itens dentro dele
         right: ; /* expecifica a distância que será distanciada da direita */
         left: ; /* expecifica a distância que será distanciada da esquerda */
     }
-- Manipula a posição de um elemento para a página, fizando-a na viewport e ditando as distâncias de sua localização inicial
+- Manipula a posição de um elemento para a viewport, ditando as distâncias de sua localização inicial e travando sua mostragem naquele local mesmo com a movimentação da página
+- Retira o elemento do fluxo da página, tornando-o inérte aos outros elementos e fizado naquela posição da tela.
+
 <hr>
 
 # <p style="text-align: center;"> Dimensionamento

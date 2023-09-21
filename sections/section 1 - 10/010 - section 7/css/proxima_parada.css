@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: gray;
+}
+
+a{
+    color: greenyellow;
+    padding: 4px;
+}
+
+a:hover{
+    color: grey;
+}
+menu a:hover{
+    text-shadow: none;
+    background-color: greenyellow;
+}
+
+header{
+    position: static;
+    margin-bottom: 22px;
+}
+
+header h1{
+    border-radius: 0px 5px;
+    border-left: 5px solid greenyellow;
+    border-bottom: 5px solid greenyellow;
+    box-shadow: -2px 2px 0px black;
+}
+
+header h1:hover{
+    color: grey;
+    text-shadow: none;
+    background-color: yellowgreen;
+}
+
+main ul{
+    width: 90vw;
+    margin: auto;
+}
+
+main li{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    background-color: white;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+
+    margin: 10px;
+}
+
+main .comp li{
+    width: 45vw;
+}
+
+main img{
+    width: 300px;
+    height: 200px;
+    /* border-radius: 15px 0px 0px 15px; */
+    object-fit: cover;
+}
+
+main article{
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .texto{
+    color: rgb(60, 60, 60);
+}
+
+main .explore{
+    text-align: end;
+}
+
+main .comp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}

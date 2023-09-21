@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: orange;
+    padding: 10px;
+}
+
+ul {
+    width: 600px;
+    padding: 10px;
+    margin: 10px auto;
+    list-style: none;
+
+    background-color: blue;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+li {
+    width: 200px;
+    padding: 10px;
+    margin: 20px auto;
+    text-align: center;
+
+    border-radius: 12px;
+
+    background-color: yellow;
+}
+
+li:nth-of-type(3), li:nth-of-type(6) {
+    width: 500px;
+    color: violet;
+    grid-column: 1/3;
+}
