@@ -62,7 +62,7 @@ main h2{
     width: 500px;
     padding: 10px;
     font-size: 20px;
-    margin: auto;
+    margin: 10px;
 
     color: white;
 }
@@ -87,5 +87,5 @@ li a{
     color: rgb(41, 41, 41);
     background-color: orange;
     border-radius: 12px;
-    border: 2px solid blacko;
+    border: 2px solid black;
 }

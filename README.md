@@ -452,6 +452,24 @@ Para manter um elemento com o tamanho da viewport ou do container que o contem, 
         }
 <hr>
 
+# <p style="text-align: center;"> Media Queries
+    @media (min width: 600px (and/or) max width: 1200px) {
+        p{
+            font-size: 2rem;
+        }
+    }
+
+- Media queries são regras de aplicação que são ativadas em tipos expecificos de tamanho de viewport, possibilitando que o mesmo site seja bem estilizado em mobiles devices ou aparelhos maiores
+    
+        Larguras comuns para media queries
+          modo retrato        modo paisagem
+
+        smarphones: 480px   notebook: 1024px
+        tablets:    768px   desktops: 1200px
+                            tvs:     >1200px
+
+<hr>
+
 # <p style="text-align: center;"> Peculiaridades
 
 - Elementos aninhados herdam as regras de seus containers
