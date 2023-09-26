@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@media (min-width: 758px) {
+    main{
+        height: 500px;
+    }
+
+    main div{
+        width: 700px;
+    }
+
+    main h2{
+        width: 500px;
+    }
+
+    main ul{
+         display: flex;
+         flex-flow: row nowrap;
+         justify-content: space-between;
+    }
+}
