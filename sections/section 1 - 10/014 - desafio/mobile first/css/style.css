@@ -42,6 +42,7 @@ menu {
     padding: 10px;
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
     text-align: center;
 }
 
