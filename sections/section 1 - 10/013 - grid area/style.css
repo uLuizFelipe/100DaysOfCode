@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-rows: 50px auto 60px;
+    grid-template-areas: "header header" "aside main" "footer footer";
+}
+
+header{
+    color: white;
+    background-color: purple;
+    grid-area: header;
+    font-size: 24px;
+    font-weight: 900;
+
+}
+
+aside{
+    background-color: orange;
+    grid-area: aside;
+    text-align: center;
+}
+
+main{
+    background-color: aliceblue;
+    grid-area: main;
+    height: 85vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+main p{
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+footer{
+    background-color: gray;
+    grid-area: footer;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: end;
+    justify-content: center;
+}

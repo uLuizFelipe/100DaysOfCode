@@ -344,6 +344,28 @@ Ao necessitar de um container modular que permita organizar os itens dentro dele
             grid-rows: n/m;
         }
 - gerencia quantas colunas ou linhas serão consumidas por aquele elemento
+
+        #body{
+            display: grid;
+            grid-template-column: 50% auto;
+            grid-template-row: 100px auto 50px;
+            grid-template-area: "header header"
+                                "lateral main" 
+                                "footer footer";
+        }
+        header{
+            grid-area: header;
+        }
+        aside{
+            grid-area: lateral;
+        }
+        main{
+            grid-area: main;
+        }
+        footer{
+            grid-area: footer;
+        }
+    - Essa configuração define uma grade de 6 blocos, com duas colunas e 3 linhas, é possivel nomear as áreas da grade para que os elementos ocupem-nas por meio da propriedade <strong>grid-template-area</strong> no container, nomeando as colunas dentro de cada linha separadamente e ditando qual área ocupar pelos elementos com a propriedade <strong>grid-area</strong>
 <hr>
 
 # <p style="text-align: center;"> Backgrounds

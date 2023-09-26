@@ -17,15 +17,14 @@ body {
     padding: 10px;
 }
 
-#pai{
+#container{
     margin: 10px;
     padding: 30px;
+
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    justify-content: space-around;
-    align-content: space-around;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
 
     background-color: pink;
 }
