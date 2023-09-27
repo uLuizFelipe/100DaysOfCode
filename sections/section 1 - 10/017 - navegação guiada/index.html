@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegação guiada por links internos</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: grey;
+            display: grid;
+            grid-template-columns: 20% auto;
+            grid-template-rows: 70px auto;
+            grid-template-areas: "header header" "aside main";
+            gap: 60px 10px;
+        }
+        header{
+            height: 70px;
+            margin-bottom: 50px;
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+
+            grid-area: header;
+        }
+        header h1{
+            margin: 10px;
+            color: orange;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header menu{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+        }
+        header a{
+            padding: 5px;
+            margin: 5px;
+            color: orange;
+            text-decoration: none;
+        }
+
+        header a:hover{
+            color: black;
+        }
+
+        aside{
+            position: fixed;
+            top: 18vh;
+
+            text-align: center;
+            grid-area: aside;
+        }
+
+        aside h2{
+            width: 80px;
+            margin: auto
+        }
+
+        aside menu{
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        aside a{
+            padding: 3px;
+            text-decoration: none;
+            color: orange;
+            font-size: 20px;
+        }
+        
+        aside a:hover{
+            color: black;
+        }
+
+        main{
+            text-align: justify;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            grid-area: main;
+        }
+        main h2{
+            width: 50vw;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+            border: 2px solid black;
+            border-radius: 16px;
+        }
+
+        main article{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+        }
+        main p{
+            width: 60vw;
+            padding: 10px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 14px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Titulo principal da página</h1>
+        <menu>
+            <a href="#">pag1</a>
+            <a href="#">pag2</a>
+        </menu>
+    </header>
+    <aside>
+        <h2>Navegue pelos nossos links internos</h2>
+        <menu>
+            <a href="#s1">sessão 1</a>
+            <a href="#s2">sessão 2</a>
+            <a href="#s3">sessão 3</a>
+            <a href="#s4">sessão 4</a>
+            <a href="#s5">sessão 5</a>
+        </menu>
+    </aside> 
+    <main>
+        <article>
+            <h2 id="s1">Sessão 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolorem explicabo ipsum, voluptatem cumque consequatur magni, mollitia doloremque aliquid provident laborum, cupiditate totam quaerat odio soluta unde tenetur. Repudiandae, delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repellat ipsam obcaecati quibusdam ad blanditiis illum nostrum odit exercitationem quos, deleniti beatae hic laudantium, assumenda quaerat quod. Eveniet, amet molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam repellendus quae temporibus voluptate natus perferendis! Iusto tenetur rerum voluptas nemo, necessitatibus inventore reiciendis quo! Tempora assumenda perspiciatis libero reprehenderit ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat illum cumque id facere aspernatur repudiandae eos rem impedit minus? Perferendis odio necessitatibus vero quidem tempora earum deleniti eaque nesciunt voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur illum ut quae. Quibusdam, aliquid veritatis. Non aliquid iure assumenda nihil eos nobis dolores sed mollitia veritatis, vel totam sunt accusantium?</p>
+        </article>
+        <article>
+            <h2 id="s2">Sessão 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolorem explicabo ipsum, voluptatem cumque consequatur magni, mollitia doloremque aliquid provident laborum, cupiditate totam quaerat odio soluta unde tenetur. Repudiandae, delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repellat ipsam obcaecati quibusdam ad blanditiis illum nostrum odit exercitationem quos, deleniti beatae hic laudantium, assumenda quaerat quod. Eveniet, amet molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam repellendus quae temporibus voluptate natus perferendis! Iusto tenetur rerum voluptas nemo, necessitatibus inventore reiciendis quo! Tempora assumenda perspiciatis libero reprehenderit ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat illum cumque id facere aspernatur repudiandae eos rem impedit minus? Perferendis odio necessitatibus vero quidem tempora earum deleniti eaque nesciunt voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur illum ut quae. Quibusdam, aliquid veritatis. Non aliquid iure assumenda nihil eos nobis dolores sed mollitia veritatis, vel totam sunt accusantium?</p>
+        </article>
+        <article>
+            <h2 id="s3">Sessão 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolorem explicabo ipsum, voluptatem cumque consequatur magni, mollitia doloremque aliquid provident laborum, cupiditate totam quaerat odio soluta unde tenetur. Repudiandae, delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repellat ipsam obcaecati quibusdam ad blanditiis illum nostrum odit exercitationem quos, deleniti beatae hic laudantium, assumenda quaerat quod. Eveniet, amet molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam repellendus quae temporibus voluptate natus perferendis! Iusto tenetur rerum voluptas nemo, necessitatibus inventore reiciendis quo! Tempora assumenda perspiciatis libero reprehenderit ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat illum cumque id facere aspernatur repudiandae eos rem impedit minus? Perferendis odio necessitatibus vero quidem tempora earum deleniti eaque nesciunt voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur illum ut quae. Quibusdam, aliquid veritatis. Non aliquid iure assumenda nihil eos nobis dolores sed mollitia veritatis, vel totam sunt accusantium?</p>
+        </article>
+        <article>
+            <h2 id="s4">Sessão 4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolorem explicabo ipsum, voluptatem cumque consequatur magni, mollitia doloremque aliquid provident laborum, cupiditate totam quaerat odio soluta unde tenetur. Repudiandae, delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repellat ipsam obcaecati quibusdam ad blanditiis illum nostrum odit exercitationem quos, deleniti beatae hic laudantium, assumenda quaerat quod. Eveniet, amet molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam repellendus quae temporibus voluptate natus perferendis! Iusto tenetur rerum voluptas nemo, necessitatibus inventore reiciendis quo! Tempora assumenda perspiciatis libero reprehenderit ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat illum cumque id facere aspernatur repudiandae eos rem impedit minus? Perferendis odio necessitatibus vero quidem tempora earum deleniti eaque nesciunt voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur illum ut quae. Quibusdam, aliquid veritatis. Non aliquid iure assumenda nihil eos nobis dolores sed mollitia veritatis, vel totam sunt accusantium?</p>
+        </article>
+        <article>
+            <h2 id="s5">Sessão 5</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolorem explicabo ipsum, voluptatem cumque consequatur magni, mollitia doloremque aliquid provident laborum, cupiditate totam quaerat odio soluta unde tenetur. Repudiandae, delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repellat ipsam obcaecati quibusdam ad blanditiis illum nostrum odit exercitationem quos, deleniti beatae hic laudantium, assumenda quaerat quod. Eveniet, amet molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam repellendus quae temporibus voluptate natus perferendis! Iusto tenetur rerum voluptas nemo, necessitatibus inventore reiciendis quo! Tempora assumenda perspiciatis libero reprehenderit ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat illum cumque id facere aspernatur repudiandae eos rem impedit minus? Perferendis odio necessitatibus vero quidem tempora earum deleniti eaque nesciunt voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur illum ut quae. Quibusdam, aliquid veritatis. Non aliquid iure assumenda nihil eos nobis dolores sed mollitia veritatis, vel totam sunt accusantium?</p>
+        </article>
+    </main>
+</body>
+</html>

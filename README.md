@@ -100,6 +100,16 @@ Fontes ditam a aparência dos simbolos utilizados na página, mais comumente das
         - &lt;a href="path" download="arquivo" type="formato do arquivo"&gt;
 <hr>
 
+# <p style="text-align: center;"> Links internos de navegação
+        <a href="#id" rel=""><a>
+
+                    ...
+
+        <p id="id"> lorem
+
+-  Essa construção de link nos encaminha diretamente para o elemento cujo id corresponda, aprimorando a navegabilidade da página
+<hr>
+
 # <p style="text-align: center;">Imagens
 
         <img src="path.tipo" alt="descrição">
